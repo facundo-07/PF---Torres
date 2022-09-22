@@ -1,0 +1,318 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+
+html{
+    font-size: 62.5%;
+    color: white;
+}
+
+body{
+    background-color: #000000;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    
+    
+
+}
+
+.logo{
+    padding-left: 50px;
+    padding-right: 43px;
+    width: 200px;  
+}
+
+.walking{
+    height: 55px;
+}
+
+.walking1{
+    height: 50px;
+}
+
+.images{
+    display: flex;
+    align-self: center;
+}
+
+.menu{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 1px;
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: 20px;    
+    
+}
+
+.background{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.container h2{
+    display: none;
+}
+
+.container div{
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.intro{
+    padding-left: 20px;
+    padding-right: 20px;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.intro p{
+    font-size: 140%;
+    padding-bottom: 20px;
+    margin-bottom: 0px
+    
+}
+
+.liverpool{
+    width: 100%;
+    
+    
+}
+
+
+h2{
+    font-size: 2rem;
+
+    ;
+}
+
+.container div img{
+    height: 70px;    
+    border-radius: 30px;  
+}
+
+.more{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    float: right;
+    font-size: 1.2rem;
+    margin-right: 20px;
+    transition: all 0.4s;
+    display: none
+}
+
+.more:hover{
+    background-color: rgba(211, 211, 211, 0.87);
+}
+
+.container div p{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.345rem;
+    text-align: justify;
+    text-justify: inter-word;
+    display: none;
+}
+
+.option{
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 4px;
+    transition: all 0.4s
+}
+
+.option:hover{
+    background-color: black;
+    color: white
+}
+
+footer{
+    margin-top: 100px;
+    border: 1px solid white
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 200px));
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+
+}
+
+.gallery div img{
+    max-width: 100%;
+    height: auto;  
+    transition: all 0.5;
+    position: relative;
+    filter: sepia(60%);
+    
+}
+
+.gallery div img:hover {
+    transform: scale(1.5);
+    transition: .4s;
+    z-index: 2;
+    filter: initial;
+    cursor: pointer;
+}
+
+.items{
+    display: flex;
+    color: black;
+
+    text-decoration: none;
+}
+
+.items ul{
+    list-style-type: none;
+    padding: 10px;
+    margin-left: 5%;
+    font-size: 170%;
+    background-color: grey;
+}
+
+.items ul li{
+    display: flex;
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgb(173, 61, 61);
+    border: 2px solid white;
+    margin-bottom: 20px;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 50%;
+
+}
+
+@media only screen and (min-width: 481px) {
+    
+
+}
+
+@media only screen and (min-width: 769px) {
+    .container h2{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .container h2{
+        display: block;
+    }
+
+
+
+    .container div p{
+        display: block;
+
+    }
+
+    .walking{
+        height: 130px;
+        display: block
+    }
+    
+    .walking1{
+        height:120px;
+        display: block
+    }
+
+    
+
+
+    .nav{
+        margin-top: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .logo{
+        padding-left: 50px;
+        padding-right: 43px;
+        
+        width: 300px;  
+    }
+
+
+
+    .container div img{
+        height: 100px;    
+        border-radius: 30px;  
+    }
+
+    .more{
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        padding: 5px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        float: right;
+        font-size: 1.2rem;
+        margin-right: 20px;
+        transition: all 0.4s;
+        display: block;
+    }
+
+    .option{
+        font-size: 2em;
+    } 
+
+    .intro h2{
+        font-size: 4em;
+    }
+    .intro p{
+        font-size: 200%;
+        
+    }
+    
+
+}
+
+
+
+
+@media only screen and (min-width: 1025px) {
+}
+
+@media only screen and (min-width: 1201px) {
+    .container h2{
+        display: block;
+    }
+
+}

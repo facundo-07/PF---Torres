@@ -225,6 +225,14 @@ footer{
 
 }
 
+.form{
+    font-size: 300%;
+}
+
+.form label{
+    padding: 20px;
+}
+
 
 
 @media only screen and (min-width: 481px) {

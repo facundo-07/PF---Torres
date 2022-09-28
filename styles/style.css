@@ -8,12 +8,14 @@ html{
     font-size: 62.5%;
     color: white;
     scroll-behavior: smooth;
+    
 }
 
 body{
     background-color: #000000;
     margin-left: 0px;
     margin-right: 0px;
+    
 }
 
 header{
@@ -22,13 +24,14 @@ header{
     margin-right: auto;
     margin-left: auto;  
     align-self: flex-start;
-
-}
+    margin-top: 0px;
+}   
 
 .logo{
     padding-left: 50px;
     padding-right: 43px;
     width: 200px;  
+     
 }
 
 .walking{
@@ -42,6 +45,7 @@ header{
 .images{
     display: flex;
     align-self: center;
+    padding-top: 40px
 }
 
 .menu{
@@ -53,26 +57,54 @@ header{
     background-color: white;
     margin-bottom: 20px;  
     width: 100%;  
-    
+ 
 }
+
 
 .background{
     width: 100%;
     margin-bottom: 30px;
-
+    margin-top: 2%;
 }
 
-.container{
+
+.navbar{
+    font-size: 1.1em;
+    padding: .5px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    opacity: .96;
+}
+
+.nav-link{
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    background-color: black;
+    color: white !important;
+}
+
+
+
+
+
+
+.container1 {
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
 }
 
-.container h2{
+.container1 h2{
     display: none;
 }
 
-.container div{
+.container1 div{
     text-align: center;
     position: relative;
     margin-bottom: 30px;
@@ -85,12 +117,14 @@ header{
     align-content: center;
     justify-content: center;
     align-self: center;
-    text-align: center;
-    background-color: white;
+    text-align: justify;
+    background-color: rgb(249, 244, 244);
     color: black;
     font-weight: bold;
-    padding: 5px;
+    padding: 15px;
 }
+
+
 
 #intro p{
     font-size: 140%;
@@ -110,11 +144,11 @@ header{
 
 h2{
     font-size: 2rem;
-
-    ;
+    text-align: center;
+ 
 }
 
-.container div img{
+.container1 div img{
     height: 70px;    
     border-radius: 30px;  
 }
@@ -136,7 +170,7 @@ h2{
     background-color: rgba(211, 211, 211, 0.87);
 }
 
-.container div p{
+.container1 div p{
     padding-left: 20px;
     padding-right: 20px;
     font-size: 1.345rem;
@@ -157,10 +191,7 @@ h2{
     transition: all 0.4s
 }
 
-.option:hover{
-    background-color: black;
-    color: white
-}
+
 
 footer{
     margin-top: 100px;
@@ -175,7 +206,7 @@ footer{
     align-items: center;
     justify-content: center;
     margin-bottom: 150px;
-
+    margin-top: 20px;
 }
 
 .gallery div img{
@@ -238,27 +269,81 @@ input{
 }
 
 
+.carousel-inner{
+    margin-right: 10%;
+    width: 80%;
+    margin-left: 10%;
+}
+
 @media only screen and (min-width: 481px) {
+    .nav-item{
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: bold
+    }
     
 
 }
 
+
+
 @media only screen and (min-width: 769px) {
-    .container h2{
+    .carousel-inner{
+        margin-right: 30%;
+        width: 40%;
+        margin-left: 30%;
+        height: 100%;
+    }
+
+    .navbar{
+        font-size: 1.3em;
+        padding: .5px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        margin-bottom: 30px;
+        
+    }
+
+    .nav-item{
+        font-size: 1.16em;
+  
+    }
+
+    .nav.link{
+        color: red;
+    
+    }
+
+    .images{
+        padding-top: 60px
+    }
+
+    .carousel-control-prev{
+        margin-left: 20%;
+        
+    }
+
+    .carousel-control-next{
+        margin-right: 20%;
+    }
+    
+    .container1 h2{
         display: block;
         margin-right: auto;
         margin-left: auto;
     }
 
-    .container h2{
+    .container1 h2{
         display: block;
+        color: white;
+        margin-top: 30px;
     }
 
 
 
-    .container div p{
+    .container1 div p{
         display: block;
-
+        color: white;
     }
 
     .walking{
@@ -289,7 +374,7 @@ input{
 
 
 
-    .container div img{
+    .container1 div img{
         height: 100px;    
         border-radius: 30px;  
     }
@@ -329,7 +414,7 @@ input{
 }
 
 @media only screen and (min-width: 1201px) {
-    .container h2{
+    .container1 h2{
         display: block;
     }
 

@@ -3,7 +3,6 @@
     
 }
 
-
 html{
     font-size: 62.5%;
     color: white;
@@ -70,7 +69,7 @@ header{
 
 .navbar{
     font-size: 1.1em;
-    padding: .5px;
+    padding: 7px 5px 5px 0px;
     margin-bottom: 10px;
     margin-top: 0px;
     position: fixed;
@@ -92,8 +91,6 @@ header{
 
 
 
-
-
 .container1 {
     display: flex;
     justify-content: center;
@@ -107,8 +104,16 @@ header{
 .container1 div{
     text-align: center;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     width: 100%;
+}
+
+.paul-george{
+    display: flex;
+}
+
+.john-ringo{
+    display: flex;
 }
 
 #intro{
@@ -171,8 +176,8 @@ h2{
 }
 
 .container1 div p{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 1.345rem;
     text-align: justify;
     text-justify: inter-word;
@@ -191,7 +196,11 @@ h2{
     transition: all 0.4s
 }
 
-
+.division{
+    border-top: 2px solid white;
+    margin-top: 20px;
+    padding-top: 10px;
+}
 
 footer{
     margin: 100px 10px 10px 10px;
@@ -237,20 +246,16 @@ footer{
     padding: 10px;
     margin-left: 5%;
     font-size: 170%;
-    background-color: grey;
 }
 
 .items ul li{
+    color: white;
     display: flex;
-    padding: 10px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: rgb(173, 61, 61);
+    padding: 5px 15px 5px 15px;
     border: 2px solid white;
     margin-bottom: 20px;
     justify-content: center;
     font-weight: bold;
-    border-radius: 50%;
 
 }
 
@@ -327,24 +332,43 @@ input{
         margin-right: 20%;
     }
     
-    .container1 h2{
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
+    .container1{
+        align-self: center;
+        width: 100%;
+    }
+
+    container1 p{
+        padding: 0px;
     }
 
     .container1 h2{
         display: block;
         color: white;
         margin-top: 30px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
     }
 
-
+    .paul-george{
+        display: block;
+        margin-bottom: 20px;
+        padding: 10px;
+        align-self: center;
+    }
+    
+    .john-ringo{
+        display: block;
+        margin-bottom: 20px;
+        padding: 10px;
+        align-self: center;
+    }
 
     .container1 div p{
         display: block;
         color: white;
     }
+
 
     .walking{
         height: 130px;
@@ -356,8 +380,18 @@ input{
         display: block
     }
 
+    .paul-george div{
+        border: 1px solid white;
+        border-radius: 3%;
+        padding: 15px 10px 40px 10px;
+    }
     
-
+    .john-ringo div{
+        border: 1px solid white;
+        border-radius: 3%;
+        padding: 15px 10px 40px 10px;
+        
+    }
 
     .nav{
         margin-top: 10px;
@@ -368,7 +402,6 @@ input{
     .logo{
         padding-left: 50px;
         padding-right: 43px;
-        
         width: 300px;  
     }
 

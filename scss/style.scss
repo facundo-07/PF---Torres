@@ -26,7 +26,6 @@ header{
     flex-direction: column;
     margin-right: auto;
     margin-left: auto;  
-    align-self: flex-start;
     margin-top: 0px;
 }   
 
@@ -45,7 +44,6 @@ header{
     }
 
 }
-
 
 .walking{
     height: 55px;
@@ -165,26 +163,25 @@ header{
                 padding-left: 10px;
                 padding-right: 10px;
                 font-size: 1.345rem;
-                text-align: justify;
-                text-justify: inter-word;
+                text-align: left;
             }
         };		
         };
-    @include respond (large){
-        display: grid;
-    };
-    .description{
-        @include respond(large){
-        border: 2px solid white;
-        margin: 20px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        padding: 15px;
+        @include respond (large){
+            display: grid;
+        };
+        .description{
+            @include respond(large){
+            border: 1.5px solid white;
+            margin: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding: 15px;
             }
         }
-    }
+}
 
 
 
@@ -193,7 +190,7 @@ header{
     display: none;
         &:hover{
             background-color: rgba(211, 211, 211, 0.87);
-            };
+        };
     @include respond(large){
         display: block;
         text-decoration: none;
@@ -253,6 +250,7 @@ header{
             font-size: 2em !important;
             text-align: center;
             color: $base-color !important;
+            font-weight: bold;
             @include respond(medium){
                 font-size: 2.2em !important;
             };
@@ -297,6 +295,7 @@ header{
     justify-content: center;
     margin-bottom: 150px;
     margin-top: 20px;
+    align-items: center;
         div{
             img{
                 max-width: 100%;
@@ -318,6 +317,11 @@ header{
 .items{
     display: flex;
     text-decoration: none;
+    @include respond(large){
+        width: 60%;
+        margin-right: 20%;
+        margin-left: 20%;
+    }
         ul{
             list-style-type: none;
             padding: 10px;
@@ -333,94 +337,205 @@ header{
                     justify-content: center;
                     font-weight: bold; 
                 }
-            }    
+            };
+            
         }
 
-
-.social{
-    padding-left: 20px;
-    text-decoration: none;
-}
-
 form{
+    width: fit-content;
+    border: 1px solid white;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 15px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
 	label{
-   	 width: 100%;
-	padding: 2px;}
+   	width: 50%;
+	padding: 2px;};
+    @include respond(large){
+        width: 60%;
+    }
 }
 
-.field{
+fieldset{
     width: 90%;
-    border: 1px solid white;
     padding: 10px;
     color: $text-color;
     font-size: 150%;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 40px;
+
+    legend{
+        background-color: rgb(243, 230, 206);
+        color: #000000;
+        font-size: .7em;
+        padding: 10px;
+        font-weight: bold;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        width: fit-content;
+        margin-bottom: 40px;
+        @include respond(medium){
+            font-size: 1em;
+        };
+        @include respond(large){
+            font-size: 1.1em;
+        };
+        @include respond(extra-large){
+            font-size: 1.2em;
+        };
+    }
 }
 
 input{
     margin: 6px;
     width: 90%;
     background-color: rgb(235, 233, 233);
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    color: #000000;
+    padding: 5px;
 }
 
 .submit{
     float: right;
-    width: 40%;
+    width: 30%;
+    margin-top: 40px;
+    transition: all .4s;
+    border: 1px solid black;
+    &:hover{
+        background-color: #000000;
+        color: white;
+        border: 1px solid white;
+    }
+}
+
+.music-description{
+    background-color: rgb(243, 230, 206);
+    padding: 10px 20px 10px 20px;
     margin-top: 20px;
+    h1{
+        color: $base-color;
+        font-weight: bold;
+    };
+    p{
+        color: $base-color;
+        font-size: 1.1em;
+        @include respond(medium){
+            font-size: 1.2em;
+        };
+        @include respond(large){
+            font-size: 1.3em;
+        };
+        @include respond(extra-large){
+            font-size: 1.4em;
+        };
+    };
+    a{
+        text-decoration: none;
+        font-weight: bold;
+        color: $base-color;
+    }
 }
 
 .carousel{
-    width: 60%;   
+    width: 90%;   
     position: relative;
-    background-color: inherit;
-    border-radius: 5%;
+    background-color: black;
         h1{
-            color: $base-color;
-            background-color: #767674;
+            color: $base-color !important;
+            background-color: rgb(243, 230, 206);
             height: 40px;
-            font-size: 1.3em;
+            font-weight: bold;
+            font-size: 1.2em;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 20px;
+            margin: 10px 8% 20px 8%;
             opacity: .8;
-            margin-left: 10%;
-            margin-right: 10%;
             border-bottom-right-radius: 20px;
             border-top-right-radius: 20px;
             border-bottom-left-radius: 20px;
             border-top-left-radius: 20px;
             padding: 10px;
-        }
+            @include respond(medium){
+                font-size: 1.4em;
+            };
+            @include respond(large){
+                font-size: 1.6em;
+            };
+            @include respond(extra-large){
+                font-size: 2em;
+            };
+        };
+        article{
+            margin-top: 15px;
+            border: .5px solid rgb(237, 214, 214);
+            padding: 10px;
+            font-size: 1.1em;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            @include respond(medium){
+                font-size: 1.2em;
+            };
+            @include respond(large){
+                font-size: 1.3em;
+            };
+            @include respond(extra-large){
+                font-size: 1.4em;
+            };
+        };
+        img{
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+        };
+
     }
 
 .carousel-inner{
     width: 80%;
     margin: 0 10% 0 10%;
     padding: 0px 10px 20px 10px;
+    background-color: black;
+    @include respond(large){
+        width: 60%;
+        margin: 0 20% 0 20%
+    }
 }
 
 .carousel-control-next{
-    background-color: #767674;
-    position: absolute;
+    background-color: rgb(122, 120, 120);
     height: 40px;
-    padding-left: 10px;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
-    opacity: .5!important;
+    width: 40px !important;
+    border-radius: 50%;
+    opacity: .5 !important;
+    margin-top: 10px;
+    @include respond(large){
+        margin-right: 10%;
+    };
 }
 
 .carousel-control-prev{
-    background-color: #767674;
-    position: absolute;
+    background-color: rgb(122, 120, 120);
     height: 40px;
-    padding-right: 10px;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
-    opacity: .5;
-
+    width: 40px !important;
+    border-radius: 50%;
+    opacity: .5 !important;
+    margin-top: 10px;
+    @include respond(large){
+        margin-left: 10%;
+    };
 }
 
 footer{
@@ -431,15 +546,56 @@ footer{
     color: $text-color;
     margin: 100px 5% 20px 5%;
     border: 1px solid white;
-    font-size: 1.4em;
     width: 90%;
-    padding-bottom: 10px;    
+    padding-bottom: 10px;   
+    p{
+        @include respond(medium){
+            font-size: 1.4em;
+        }
+        @include respond(large){
+            font-size: 1.5em;
+        }
+    } 
 }
+
+.icons{
+    margin: 10px;
+    display: inline-flex;
+    gap: 30px;
+    .bi-spotify{
+        transition: all .4s;
+        &:hover{
+            color: rgb(6, 93, 6);
+        }
+    };
+    .bi-instagram{
+        transition: all .4s;
+        &:hover{
+            color: rgb(179, 85, 107);
+        };
+    };
+    .bi-youtube{
+        transition: all .4s;
+        &:hover{
+            color: rgb(146, 6, 6);
+        };
+    }
+}
+
 
 
 .footer-logo{
     width: 70px;
     margin-top: 8px;
+    @include respond(medium){
+        width: 80px;
+    };
+    @include respond(large){
+        width: 90px;
+    };
+    @include respond(extra-large){
+        width: 110px;
+    };
 }
 
 .box{
@@ -482,6 +638,15 @@ footer{
     visibility: hidden;
     opacity: 0;
     font-size: 1.2em;
+    @include respond(medium){
+        font-size: 1,3em;
+    };
+    @include respond(large){
+        font-size: 1,4em;
+    };
+    @include respond(extra-large){
+        font-size: 1,5em;
+    };
         &:target {
             visibility: visible;
             opacity: 1;
@@ -490,21 +655,25 @@ footer{
  
 .popup {
     margin: 70px auto;
-    padding: 10px 20px 10px 20px;
-    background: #fff;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(243, 230, 206);
     border-radius: 5px;
     width: 90%;
     transition: all 5s ease-in-out;
+    min-height:200px;
+    max-height:400px;
+    overflow-y:scroll !important;
         h2 {
             margin-top: 0;
-            color: #333;
-            font-family: 'Poppins', sans-serif;
+            color: $base-color;
+            font-weight: bold;
+            margin-bottom: 10px;
             };
         .close {
             top: 10px;
             right: 30px;
             transition: all 200ms;
-            font-size: 30px;
+            font-size: 25px;
             font-weight: bold;
             text-decoration: none;
             color: #333;
@@ -516,30 +685,38 @@ footer{
         .content {
             max-height: 30%;
             overflow: auto;
+            border: 2px solid black;
+            padding: 15px;
+            background-color: rgb(255, 255, 255);
+            p{
+            color: black;
+            }
         };
+
   }
 
 .albums-banners{
     display: flex;
     margin: 50px 5% 30px 5%;
-    background-color: rgba(180, 179, 179, 0.2);
+    background-color: $base-color;
         .banner{
-            width: 18%;
-            padding: 1%;
+            width: 20%;
             height: 100%;
             display: none;
+
             @include respond(large){
                 display: block;
             };
+
         }
 }
 
-.spotify{
+#spotify{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px, 200px));
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
     margin-left: 10%;
     margin-right: 10%;
-    }
+}
 

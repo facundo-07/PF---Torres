@@ -5,7 +5,7 @@ html { font-size: 62.5%; scroll-behavior: smooth; }
 
 body { background-color: #000000; margin-left: 0px; margin-right: 0px; }
 
-header { display: flex; flex-direction: column; margin-right: auto; margin-left: auto; align-self: flex-start; margin-top: 0px; }
+header { display: flex; flex-direction: column; margin-right: auto; margin-left: auto; margin-top: 0px; }
 
 .logo { padding-left: 50px; padding-right: 43px; width: 200px; }
 
@@ -65,11 +65,11 @@ header { display: flex; flex-direction: column; margin-right: auto; margin-left:
 
 .container1 div p { display: none; }
 
-@media (min-width: 1024px) { .container1 div p { display: block; padding-left: 10px; padding-right: 10px; font-size: 1.345rem; text-align: justify; text-justify: inter-word; } }
+@media (min-width: 1024px) { .container1 div p { display: block; padding-left: 10px; padding-right: 10px; font-size: 1.345rem; text-align: left; } }
 
 @media (min-width: 1024px) { .container1 { display: grid; } }
 
-@media (min-width: 1024px) { .container1 .description { border: 2px solid white; margin: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; padding: 15px; } }
+@media (min-width: 1024px) { .container1 .description { border: 1.5px solid white; margin: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; padding: 15px; } }
 
 .more { display: none; }
 
@@ -93,7 +93,7 @@ header { display: flex; flex-direction: column; margin-right: auto; margin-left:
 
 @media (min-width: 1200px) { #intro p { font-size: 150% !important; } }
 
-#intro h2 { font-size: 2em !important; text-align: center; color: black !important; }
+#intro h2 { font-size: 2em !important; text-align: center; color: black !important; font-weight: bold; }
 
 @media (min-width: 720px) { #intro h2 { font-size: 2.2em !important; } }
 
@@ -107,7 +107,7 @@ header { display: flex; flex-direction: column; margin-right: auto; margin-left:
 
 .division { border-top: 2px solid white; margin-top: 20px; padding-top: 10px; width: 100%; justify-content: center; }
 
-.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 200px)); gap: 10px; justify-content: center; margin-bottom: 150px; margin-top: 20px; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 200px)); gap: 10px; justify-content: center; margin-bottom: 150px; margin-top: 20px; align-items: center; }
 
 .gallery div img { max-width: 100%; height: auto; transition: all 0.5; position: relative; filter: sepia(60%); }
 
@@ -115,33 +115,107 @@ header { display: flex; flex-direction: column; margin-right: auto; margin-left:
 
 .items { display: flex; text-decoration: none; }
 
+@media (min-width: 1024px) { .items { width: 60%; margin-right: 20%; margin-left: 20%; } }
+
 .items ul { list-style-type: none; padding: 10px; margin-left: 5%; margin-right: 5%; font-size: 170%; width: 100%; }
 
 .items ul li { display: flex; padding: 5px 15px 5px 15px; border: 2px solid white; margin-bottom: 20px; justify-content: center; font-weight: bold; }
 
-.social { padding-left: 20px; text-decoration: none; }
+form { width: fit-content; border: 1px solid white; margin-top: 40px; margin-bottom: 40px; padding: 15px; border-bottom-right-radius: 20px; border-top-right-radius: 20px; border-bottom-left-radius: 20px; border-top-left-radius: 20px; }
 
-form label { width: 100%; padding: 2px; }
+form label { width: 50%; padding: 2px; }
 
-.field { width: 90%; border: 1px solid white; padding: 10px; color: white; font-size: 150%; margin-left: 5%; margin-right: 5%; margin-top: 40px; }
+@media (min-width: 1024px) { form { width: 60%; } }
 
-input { margin: 6px; width: 90%; background-color: #ebe9e9; }
+fieldset { width: 90%; padding: 10px; color: white; font-size: 150%; margin-left: 5%; margin-right: 5%; margin-top: 40px; }
 
-.submit { float: right; width: 40%; margin-top: 20px; }
+fieldset legend { background-color: #f3e6ce; color: #000000; font-size: .7em; padding: 10px; font-weight: bold; border-bottom-right-radius: 20px; border-top-right-radius: 20px; border-bottom-left-radius: 20px; border-top-left-radius: 20px; width: fit-content; margin-bottom: 40px; }
 
-.carousel { width: 60%; position: relative; background-color: inherit; border-radius: 5%; }
+@media (min-width: 720px) { fieldset legend { font-size: 1em; } }
 
-.carousel h1 { color: black; background-color: #767674; height: 40px; font-size: 1.3em; display: flex; justify-content: center; align-items: center; margin-bottom: 20px; opacity: .8; margin-left: 10%; margin-right: 10%; border-bottom-right-radius: 20px; border-top-right-radius: 20px; border-bottom-left-radius: 20px; border-top-left-radius: 20px; padding: 10px; }
+@media (min-width: 1024px) { fieldset legend { font-size: 1.1em; } }
 
-.carousel-inner { width: 80%; margin: 0 10% 0 10%; padding: 0px 10px 20px 10px; }
+@media (min-width: 1200px) { fieldset legend { font-size: 1.2em; } }
 
-.carousel-control-next { background-color: #767674; position: absolute; height: 40px; padding-left: 10px; border-bottom-right-radius: 20px; border-top-right-radius: 20px; opacity: 0.5 !important; }
+input { margin: 6px; width: 90%; background-color: #ebe9e9; border-bottom-right-radius: 15px; border-top-right-radius: 15px; border-bottom-left-radius: 15px; border-top-left-radius: 15px; color: #000000; padding: 5px; }
 
-.carousel-control-prev { background-color: #767674; position: absolute; height: 40px; padding-right: 10px; border-bottom-left-radius: 20px; border-top-left-radius: 20px; opacity: .5; }
+.submit { float: right; width: 30%; margin-top: 40px; transition: all .4s; border: 1px solid black; }
 
-footer { justify-content: center; align-items: center; display: flex; text-align: center; color: white; margin: 100px 5% 20px 5%; border: 1px solid white; font-size: 1.4em; width: 90%; padding-bottom: 10px; }
+.submit:hover { background-color: #000000; color: white; border: 1px solid white; }
+
+.music-description { background-color: #f3e6ce; padding: 10px 20px 10px 20px; margin-top: 20px; }
+
+.music-description h1 { color: black; font-weight: bold; }
+
+.music-description p { color: black; font-size: 1.1em; }
+
+@media (min-width: 720px) { .music-description p { font-size: 1.2em; } }
+
+@media (min-width: 1024px) { .music-description p { font-size: 1.3em; } }
+
+@media (min-width: 1200px) { .music-description p { font-size: 1.4em; } }
+
+.music-description a { text-decoration: none; font-weight: bold; color: black; }
+
+.carousel { width: 90%; position: relative; background-color: black; }
+
+.carousel h1 { color: black !important; background-color: #f3e6ce; height: 40px; font-weight: bold; font-size: 1.2em; display: flex; justify-content: center; align-items: center; margin: 10px 8% 20px 8%; opacity: .8; border-bottom-right-radius: 20px; border-top-right-radius: 20px; border-bottom-left-radius: 20px; border-top-left-radius: 20px; padding: 10px; }
+
+@media (min-width: 720px) { .carousel h1 { font-size: 1.4em; } }
+
+@media (min-width: 1024px) { .carousel h1 { font-size: 1.6em; } }
+
+@media (min-width: 1200px) { .carousel h1 { font-size: 2em; } }
+
+.carousel article { margin-top: 15px; border: 0.5px solid #edd6d6; padding: 10px; font-size: 1.1em; border-bottom-left-radius: 10px; border-top-left-radius: 10px; border-bottom-right-radius: 10px; border-top-right-radius: 10px; }
+
+@media (min-width: 720px) { .carousel article { font-size: 1.2em; } }
+
+@media (min-width: 1024px) { .carousel article { font-size: 1.3em; } }
+
+@media (min-width: 1200px) { .carousel article { font-size: 1.4em; } }
+
+.carousel img { border-bottom-left-radius: 10px; border-top-left-radius: 10px; border-bottom-right-radius: 10px; border-top-right-radius: 10px; }
+
+.carousel-inner { width: 80%; margin: 0 10% 0 10%; padding: 0px 10px 20px 10px; background-color: black; }
+
+@media (min-width: 1024px) { .carousel-inner { width: 60%; margin: 0 20% 0 20%; } }
+
+.carousel-control-next { background-color: #7a7878; height: 40px; width: 40px !important; border-radius: 50%; opacity: .5 !important; margin-top: 10px; }
+
+@media (min-width: 1024px) { .carousel-control-next { margin-right: 10%; } }
+
+.carousel-control-prev { background-color: #7a7878; height: 40px; width: 40px !important; border-radius: 50%; opacity: .5 !important; margin-top: 10px; }
+
+@media (min-width: 1024px) { .carousel-control-prev { margin-left: 10%; } }
+
+footer { justify-content: center; align-items: center; display: flex; text-align: center; color: white; margin: 100px 5% 20px 5%; border: 1px solid white; width: 90%; padding-bottom: 10px; }
+
+@media (min-width: 720px) { footer p { font-size: 1.4em; } }
+
+@media (min-width: 1024px) { footer p { font-size: 1.5em; } }
+
+.icons { margin: 10px; display: inline-flex; gap: 30px; }
+
+.icons .bi-spotify { transition: all .4s; }
+
+.icons .bi-spotify:hover { color: #065d06; }
+
+.icons .bi-instagram { transition: all .4s; }
+
+.icons .bi-instagram:hover { color: #b3556b; }
+
+.icons .bi-youtube { transition: all .4s; }
+
+.icons .bi-youtube:hover { color: #920606; }
 
 .footer-logo { width: 70px; margin-top: 8px; }
+
+@media (min-width: 720px) { .footer-logo { width: 80px; } }
+
+@media (min-width: 1024px) { .footer-logo { width: 90px; } }
+
+@media (min-width: 1200px) { .footer-logo { width: 110px; } }
 
 .box { width: 100%; margin: 0 auto; }
 
@@ -155,22 +229,30 @@ footer { justify-content: center; align-items: center; display: flex; text-align
 
 .overlay { position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); transition: opacity 500ms; visibility: hidden; opacity: 0; font-size: 1.2em; }
 
+@media (min-width: 720px) { .overlay { font-size: 1,3em; } }
+
+@media (min-width: 1024px) { .overlay { font-size: 1,4em; } }
+
+@media (min-width: 1200px) { .overlay { font-size: 1,5em; } }
+
 .overlay:target { visibility: visible; opacity: 1; }
 
-.popup { margin: 70px auto; padding: 10px 20px 10px 20px; background: #fff; border-radius: 5px; width: 90%; transition: all 5s ease-in-out; }
+.popup { margin: 70px auto; padding: 10px 10px 10px 10px; background-color: #f3e6ce; border-radius: 5px; width: 90%; transition: all 5s ease-in-out; min-height: 200px; max-height: 400px; overflow-y: scroll !important; }
 
-.popup h2 { margin-top: 0; color: #333; font-family: 'Poppins', sans-serif; }
+.popup h2 { margin-top: 0; color: black; font-weight: bold; margin-bottom: 10px; }
 
-.popup .close { top: 10px; right: 30px; transition: all 200ms; font-size: 30px; font-weight: bold; text-decoration: none; color: #333; margin-left: 90%; }
+.popup .close { top: 10px; right: 30px; transition: all 200ms; font-size: 25px; font-weight: bold; text-decoration: none; color: #333; margin-left: 90%; }
 
 .popup .close:hover { color: #d83b06; }
 
-.popup .content { max-height: 30%; overflow: auto; }
+.popup .content { max-height: 30%; overflow: auto; border: 2px solid black; padding: 15px; background-color: white; }
 
-.albums-banners { display: flex; margin: 50px 5% 30px 5%; background-color: rgba(180, 179, 179, 0.2); }
+.popup .content p { color: black; }
 
-.albums-banners .banner { width: 18%; padding: 1%; height: 100%; display: none; }
+.albums-banners { display: flex; margin: 50px 5% 30px 5%; background-color: black; }
+
+.albums-banners .banner { width: 20%; height: 100%; display: none; }
 
 @media (min-width: 1024px) { .albums-banners .banner { display: block; } }
 
-.spotify { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 200px)); gap: 20px; justify-content: center; margin-left: 10%; margin-right: 10%; }
+#spotify { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 200px)); gap: 40px; justify-content: center; margin-left: 10%; margin-right: 10%; }

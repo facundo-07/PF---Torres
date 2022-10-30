@@ -6,7 +6,6 @@
 *{
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif !important;
-    color: $text-color;
 }
 
 html{
@@ -98,12 +97,21 @@ header{
 
 
 .navbar{
-    font-size: 1.1em;
+    font-size: 1.3em;
     padding: 7px 5px 5px 0px;
     position: fixed;
     width: 100%;
     z-index: 1000;
     opacity: .96;
+    @include respond (medium){
+        font-size: 1.4em !important;
+    } ;
+    @include respond (large){
+        font-size: 1.5em !important;
+    };
+    @include respond (extra-large){
+        font-size: 1.5em !important;
+    };
 }
 
 .nav-link{
@@ -114,15 +122,7 @@ header{
         background-color: $base-color;
         color: white !important;
     };
-    @include respond (medium){
-        font-size: 1.1em !important;
-    } ;
-    @include respond (large){
-        font-size: 1.2em !important;
-    };
-    @include respond (extra-large){
-        font-size: 1.3em !important;
-    };
+    
 }
 
 
@@ -132,6 +132,7 @@ header{
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
+    color: white !important;
 	h2{
 		display: none;
         @include respond(large){
@@ -183,8 +184,6 @@ header{
 }
 
 
-
-
 .more{
     display: none;
         &:hover{
@@ -200,7 +199,7 @@ header{
         float: right;
         font-size: 1.3rem;
         margin-right: 20px;
-        transition: all 0.4s;
+        transition: $transition;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         border-bottom-left-radius: 20px;
@@ -226,7 +225,7 @@ header{
     font-weight: bold;
     padding: 15px;
         p{
-            font-size: 110%;
+            font-size: 1.2em;
             padding-bottom: 20px;
             margin-bottom: 0px;
             line-height: 1.5em;
@@ -236,13 +235,13 @@ header{
                     margin-right: 5px;
                 };
             @include respond(medium){
-                font-size: 120% !important;
+                font-size: 1.3em !important;
             };
             @include respond(large){
-                font-size: 130% !important;
+                font-size: 1.4em !important;
             };
             @include respond(extra-large){
-                font-size: 150% !important;
+                font-size: 1.5em !important;
             }
 			}
         h2{
@@ -275,7 +274,7 @@ header{
     display: flex;
     justify-content: space-evenly;
     padding: 4px;
-    transition: all 0.4s
+    transition: $transition;
 }
 
 .division{
@@ -299,12 +298,12 @@ header{
             img{
                 max-width: 100%;
                 height: auto;  
-                transition: all 0.5;
+                transition: $transition ;
                 position: relative;
                 filter: sepia(60%);
                     &:hover{
                         transform: scale(1.4);
-                        transition: all .4s;
+                        transition: $transition;
                         z-index: 2;
                         filter: initial;
                         cursor: pointer;
@@ -313,111 +312,36 @@ header{
             }
         }       
 
-.items{
-    display: flex;
-    text-decoration: none;
-    @include respond(large){
-        width: 60%;
-        margin-right: 20%;
-        margin-left: 20%;
-    }
-        ul{
-            list-style-type: none;
-            padding: 10px;
-            margin-left: 5%;
-            margin-right: 5%;
-            font-size: 170%;
-            width: 100%;
-                li{
-                    display: flex;
-                    padding: 5px 15px 5px 15px;
-                    border: 2px solid white;
-                    margin-bottom: 20px;
-                    justify-content: center;
-                    font-weight: bold; 
-                }
-            };
+// items.{
+//     display: flex;
+//     text-decoration: none;
+//     @include respond(large){
+//         width: 60%;
+//         margin-right: 20%;
+//         margin-left: 20%;
+//     }
+//         ul{
+//             list-style-type: none;
+//             padding: 10px;
+//             margin-left: 5%;
+//             margin-right: 5%;
+//             font-size: 170%;
+//             width: 100%;
+//                 li{
+//                     display: flex;
+//                     padding: 5px 15px 5px 15px;
+//                     border: 2px solid white;
+//                     margin-bottom: 20px;
+//                     justify-content: center;
+//                     font-weight: bold; 
+//                 }
+//             };
             
-        }
+//         }
 
-form{
-    width: fit-content;
-    border: 1px solid white;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 15px;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
-	label{
-   	width: 50%;
-	padding: 2px;};
-    @include respond(large){
-        width: 60%;
-    }
-}
-
-fieldset{
-    width: 90%;
-    padding: 10px;
-    color: $text-color;
-    font-size: 150%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 40px;
-
-    legend{
-        background-color: rgb(243, 230, 206);
-        color: #000000;
-        font-size: .7em;
-        padding: 10px;
-        font-weight: bold;
-        border-bottom-right-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
-        width: fit-content;
-        margin-bottom: 40px;
-        @include respond(medium){
-            font-size: 1em;
-        };
-        @include respond(large){
-            font-size: 1.1em;
-        };
-        @include respond(extra-large){
-            font-size: 1.2em;
-        };
-    }
-}
-
-input{
-    margin: 6px;
-    width: 90%;
-    background-color: rgb(235, 233, 233);
-    border-bottom-right-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-top-left-radius: 15px;
-    color: #000000;
-    padding: 5px;
-}
-
-.submit{
-    float: right;
-    width: 30%;
-    margin-top: 40px;
-    transition: all .4s;
-    border: 1px solid black;
-    &:hover{
-        background-color: #000000;
-        color: white;
-        border: 1px solid white;
-    }
-}
 
 .music-description{
-    background-color: rgb(243, 230, 206);
+    background-color: rgb(244, 238, 225);
     padding: 10px 20px 10px 20px;
     margin-top: 20px;
     h1{
@@ -426,15 +350,15 @@ input{
     };
     p{
         color: $base-color;
-        font-size: 1.1em;
+        font-size: 1.2em;
         @include respond(medium){
-            font-size: 1.2em;
-        };
-        @include respond(large){
             font-size: 1.3em;
         };
-        @include respond(extra-large){
+        @include respond(large){
             font-size: 1.4em;
+        };
+        @include respond(extra-large){
+            font-size: 1.5em;
         };
     };
     a{
@@ -453,7 +377,7 @@ input{
             background-color: rgb(243, 230, 206);
             height: 40px;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.3em;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -475,22 +399,21 @@ input{
             };
         };
         article{
-            margin-top: 15px;
-            border: .5px solid rgb(237, 214, 214);
+            border-bottom: .5px solid rgb(237, 214, 214);
+            border-right: .5px solid rgb(237, 214, 214);
+            border-left: .5px solid rgb(237, 214, 214);
             padding: 10px;
-            font-size: 1.1em;
+            font-size: 1.2em;
             border-bottom-left-radius: 10px;
-            border-top-left-radius: 10px;
             border-bottom-right-radius: 10px;
-            border-top-right-radius: 10px;
             @include respond(medium){
-                font-size: 1.2em;
-            };
-            @include respond(large){
                 font-size: 1.3em;
             };
-            @include respond(extra-large){
+            @include respond(large){
                 font-size: 1.4em;
+            };
+            @include respond(extra-large){
+                font-size: 1.5em;
             };
         };
         img{
@@ -537,6 +460,54 @@ input{
     };
 }
 
+.container.newsletter{
+    padding-bottom: 60px !important;
+    @include respond(medium){
+        width: fit-content;
+    };
+    label{
+        font-size: 1.2em;
+        color: #000000 !important;
+        @include respond(medium){
+            font-size: 1.3em;
+        };
+        @include respond(large){
+            font-size: 1.5em;
+        }
+    };
+    legend{
+        font-size: 1.3em;
+        margin-bottom: 30px;
+        background-color: rgb(244, 238, 225);
+        color: #000000;
+        font-weight: bold;
+        padding: 10px;
+        width: fit-content;
+        @include respond(medium){
+            font-size: 1.3em;
+        };
+        @include respond(large){
+            font-size: 1.5em;
+        }
+    };
+    .submit{
+        font-size: 1.2em;
+        color: #000000 !important;
+        padding: 10px;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        float: right;
+        font-weight: bold;
+        margin-top: 5px;
+        transition: $transition;
+        &:hover{
+            background-color: rgb(122, 120, 120);
+        };
+    }
+}
+
 footer{
     justify-content: center;
     align-items: center;
@@ -561,20 +532,23 @@ footer{
     margin: 10px;
     display: inline-flex;
     gap: 30px;
+    a{
+    color: white !important;
+    }
     .bi-spotify{
-        transition: all .4s;
+        transition: $transition;
         &:hover{
             color: rgb(6, 93, 6);
         }
     };
     .bi-instagram{
-        transition: all .4s;
+        transition: $transition;
         &:hover{
             color: rgb(179, 85, 107);
         };
     };
     .bi-youtube{
-        transition: all .4s;
+        transition: $transition;
         &:hover{
             color: rgb(146, 6, 6);
         };
@@ -606,7 +580,7 @@ footer{
             border-bottom-right-radius: 20px;
             border-top-right-radius: 20px;
             background-color: white;
-            transition: all 0.4s ease-out;
+            transition: $transition;
             color: $base-color !important;
                 &:hover{
                     background-color: $base-color;
@@ -616,49 +590,94 @@ footer{
 }
 
 
+.items{
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 1.2em;
+    justify-content: center;
+    @include respond(medium){
+        width: 80%;
+        margin-inline: 10%;
+    }
+    @include respond (large){
+        width: 60%;
+        margin-right: 20%;
+        margin-left: 20%
+    };
+    .col{
+        background-color: rgb(243, 230, 206) !important;
+        margin: 15px;
+        height: 300px;
+        overflow-y: scroll;
+    };
+    .content{
+        background-color: whitesmoke;
+        margin-top: 15px;
+        padding: 10px;
+        color: #000000 !important;
+        margin: 15px;
+        border: 1.5px solid black !important;
+        h2{
+           font-weight: bold;
+           text-decoration: underline;
+        };
+        p{
+            font-size: 1.1em;
+            @include respond(medium){
+                font-size: 1.2em;
+            };
+            @include respond(large){
+                font-size: 1.4em
+            }
+        }
+    };
+    
+
+}
+
+.btn{
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: white;
+    transition: $transition;
+    color: $base-color !important;
+    padding: 5px 15px 5px 15px;
+    font-weight: bold;
+    width: 100%;
+    font-size: 1.5em;
+    &:hover{
+        background-color: $base-color;
+        color: white !important;
+        border: 1px solid white
+        }; 
+    &:focus, :active{
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+}
+
 .button {
     color: $base-color;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s ease-out;
+    transition: $transition;
         &:hover{
             color: $text-color;
                 }
   }
 
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-    font-size: 1.2em;
-    @include respond(medium){
-        font-size: 1,3em;
-    };
-    @include respond(large){
-        font-size: 1,4em;
-    };
-    @include respond(extra-large){
-        font-size: 1,5em;
-    };
-        &:target {
-            visibility: visible;
-            opacity: 1;
-        }
-    }
+
  
 .popup {
     margin: 70px auto;
     padding: 10px 10px 10px 10px;
-    background-color: rgb(243, 230, 206);
     border-radius: 5px;
     width: 90%;
-    transition: all 5s ease-in-out;
+    transition: $transition ease-in-out;
     min-height:200px;
     max-height:400px;
     overflow-y:scroll !important;
@@ -681,16 +700,16 @@ footer{
                     color: #d83b06;
                 }
             };
-        .content {
-            max-height: 30%;
-            overflow: auto;
-            border: 2px solid black;
-            padding: 15px;
-            background-color: rgb(255, 255, 255);
-            p{
-            color: black;
-            }
-        };
+        // .content {
+        //     max-height: 30%;
+        //     overflow: auto;
+        //     border: 2px solid black;
+        //     padding: 15px;
+        //     background-color: rgb(255, 255, 255);
+        //     p{
+        //     color: black;
+        //     }
+        // };
 
   }
 

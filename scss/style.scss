@@ -193,6 +193,9 @@ header{
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
             padding: 15px;
+            };
+            div{
+                height: 90%;
             }
         }
 }
@@ -211,6 +214,7 @@ header{
         font-weight: bold;
         padding: 10px;
         float: right;
+        bottom: 10px;
         font-size: 1.3rem;
         margin-right: 20px;
         transition: $transition;

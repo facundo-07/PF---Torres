@@ -93,6 +93,20 @@ header{
     width: 100%;
     margin-bottom: 30px;
     margin-top: 2%;
+    background-image: url(../media/background.png);
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    @include respond(medium){
+        height: 400px;
+    };
+    @include respond(large){
+        height: 600px;
+        background-size: cover;
+        background-attachment: fixed;
+    }
 }
 
 
@@ -230,10 +244,7 @@ header{
             margin-bottom: 0px;
             line-height: 1.5em;
             color: $base-color !important;
-            &:first-letter{
-                    font-size: 3em;
-                    margin-right: 5px;
-                };
+            
             @include respond(medium){
                 font-size: 1.3em !important;
             };
@@ -243,7 +254,13 @@ header{
             @include respond(extra-large){
                 font-size: 1.5em !important;
             }
-			}
+		};
+        p:first-of-type{
+            &:first-letter{
+                font-size: 3em;
+                margin-right: 5px;
+            };
+        };
         h2{
             font-size: 2em !important;
             text-align: center;
@@ -258,7 +275,7 @@ header{
             @include respond(extra-large){
                 font-size: 2.6em !important;
             }
-            }
+        };
 }
 
 .liverpool{
@@ -303,7 +320,6 @@ header{
                 filter: sepia(60%);
                     &:hover{
                         transform: scale(1.4);
-                        transition: $transition;
                         z-index: 2;
                         filter: initial;
                         cursor: pointer;
@@ -312,36 +328,9 @@ header{
             }
         }       
 
-// items.{
-//     display: flex;
-//     text-decoration: none;
-//     @include respond(large){
-//         width: 60%;
-//         margin-right: 20%;
-//         margin-left: 20%;
-//     }
-//         ul{
-//             list-style-type: none;
-//             padding: 10px;
-//             margin-left: 5%;
-//             margin-right: 5%;
-//             font-size: 170%;
-//             width: 100%;
-//                 li{
-//                     display: flex;
-//                     padding: 5px 15px 5px 15px;
-//                     border: 2px solid white;
-//                     margin-bottom: 20px;
-//                     justify-content: center;
-//                     font-weight: bold; 
-//                 }
-//             };
-            
-//         }
-
 
 .music-description{
-    background-color: rgb(244, 238, 225);
+    background-color: rgba(217, 217, 217, 0.9);
     padding: 10px 20px 10px 20px;
     margin-top: 20px;
     h1{
@@ -372,58 +361,69 @@ header{
     width: 90%;   
     position: relative;
     background-color: black;
-        h1{
-            color: $base-color !important;
-            background-color: rgb(243, 230, 206);
-            height: 40px;
-            font-weight: bold;
+    h1{
+        color: $base-color !important;
+        background-color: rgb(243, 230, 206);
+        height: 40px;
+        font-weight: bold;
+        font-size: 1.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 8% 20px 8%;
+        opacity: .8;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        padding: 10px;
+        @include respond(medium){
+            font-size: 1.4em;
+        };
+        @include respond(large){
+            font-size: 1.6em;
+        };
+        @include respond(extra-large){
+            font-size: 2em;
+        };
+    };
+    article{
+        border-bottom: .5px solid rgb(237, 214, 214);
+        border-right: .5px solid rgb(237, 214, 214);
+        border-left: .5px solid rgb(237, 214, 214);
+        padding: 10px;
+        margin-top: 15px;
+        font-size: 1.2em;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        color: $text-color;
+        height: 300px;
+        overflow-y: scroll;
+        background-color: rgb(243, 230, 206);
+        color: black;
+        font-weight: bold;
+        @include respond(medium){
             font-size: 1.3em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 10px 8% 20px 8%;
-            opacity: .8;
-            border-bottom-right-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-            border-top-left-radius: 20px;
-            padding: 10px;
-            @include respond(medium){
-                font-size: 1.4em;
-            };
-            @include respond(large){
-                font-size: 1.6em;
-            };
-            @include respond(extra-large){
-                font-size: 2em;
-            };
         };
-        article{
-            border-bottom: .5px solid rgb(237, 214, 214);
-            border-right: .5px solid rgb(237, 214, 214);
-            border-left: .5px solid rgb(237, 214, 214);
-            padding: 10px;
-            font-size: 1.2em;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            @include respond(medium){
-                font-size: 1.3em;
-            };
-            @include respond(large){
-                font-size: 1.4em;
-            };
-            @include respond(extra-large){
-                font-size: 1.5em;
-            };
+        @include respond(large){
+            font-size: 1.4em;
         };
-        img{
-            border-bottom-left-radius: 10px;
-            border-top-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            border-top-right-radius: 10px;
+        @include respond(extra-large){
+            font-size: 1.5em;
         };
+    };
+    img{
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    };
+}
 
-    }
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
 
 .carousel-inner{
     width: 80%;
@@ -433,7 +433,7 @@ header{
     @include respond(large){
         width: 60%;
         margin: 0 20% 0 20%
-    }
+    };
 }
 
 .carousel-control-next{
@@ -505,6 +505,13 @@ header{
         &:hover{
             background-color: rgb(122, 120, 120);
         };
+    };
+    input{
+        font-size: 1.5em;
+        margin-top: 15px;
+    };
+    .form-control{
+    height: fit-content
     }
 }
 
@@ -606,7 +613,7 @@ footer{
         margin-left: 20%
     };
     .col{
-        background-color: rgb(243, 230, 206) !important;
+        background-color: rgb(172, 172, 172) !important;
         margin: 15px;
         height: 300px;
         overflow-y: scroll;
@@ -620,7 +627,6 @@ footer{
         border: 1.5px solid black !important;
         h2{
            font-weight: bold;
-           text-decoration: underline;
         };
         p{
             font-size: 1.1em;
@@ -668,49 +674,6 @@ footer{
         &:hover{
             color: $text-color;
                 }
-  }
-
-
- 
-.popup {
-    margin: 70px auto;
-    padding: 10px 10px 10px 10px;
-    border-radius: 5px;
-    width: 90%;
-    transition: $transition ease-in-out;
-    min-height:200px;
-    max-height:400px;
-    overflow-y:scroll !important;
-        h2 {
-            margin-top: 0;
-            color: $base-color;
-            font-weight: bold;
-            margin-bottom: 10px;
-            };
-        .close {
-            top: 10px;
-            right: 30px;
-            transition: all 200ms;
-            font-size: 25px;
-            font-weight: bold;
-            text-decoration: none;
-            color: #333;
-            margin-left: 90%;
-                &:hover {
-                    color: #d83b06;
-                }
-            };
-        // .content {
-        //     max-height: 30%;
-        //     overflow: auto;
-        //     border: 2px solid black;
-        //     padding: 15px;
-        //     background-color: rgb(255, 255, 255);
-        //     p{
-        //     color: black;
-        //     }
-        // };
-
   }
 
 .albums-banners{

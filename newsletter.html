@@ -40,14 +40,14 @@
 
         </header>
         <main class="division">
-            <div class="container p-5 border rounded mt-5 mb-5 newsletter">
+            <form class="container p-5 border rounded mt-5 mb-5 newsletter" method="post">
                 <legend class="border rounded">Fill this form to get random and unknown facts about The Beatles weekly</legend>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Name" name="name">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Name" name="name" required>
                     <label for="floatingInput">Name</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Surname" name="surname">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Surname" name="surname" required>
                     <label for="floatingPassword">Surname</label>
                 </div>
                 <div class="form-floating mb-3">
@@ -59,11 +59,11 @@
                     <label for="floatingInput">Phone number</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="date" class="form-control" id="floatingInput" placeholder="01/01/1900" name="date">
+                    <input type="date" class="form-control date" id="floatingInput" placeholder="01/01/1900" name="date" required>
                     <label for="floatingInput">Date of birth</label>
                 </div>
                 <button class="submit">Submit</button>
-            </div>
+            </form>
         </main>
         <footer>
             <div>
